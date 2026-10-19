@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Desk Two — Remote Executive Support</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;700;800&display=swap">
+<style>
+:root{--g:#003d20;--a:#c8f4f6;--t:#5fcfd0;--o:#fffeef;--c:#2b3a35;--m:#5a6b64;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--o);color:var(--c);font:400 17px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:var(--g);margin:0;line-height:1.02;letter-spacing:-.02em}
+h1{font-size:clamp(46px,8vw,104px)}h2{font-size:clamp(38px,6vw,76px)}h3{font-size:26px}
+em{font-style:italic}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:110px 0}
+.logo{display:block;position:relative;overflow:hidden;aspect-ratio:10/3;background:var(--a)}
+.logo img{position:absolute;width:147%;max-width:none;left:-22.5%;top:-177%}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--a);border-bottom:1px solid rgba(0,61,32,.12)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:70px}
+nav .logo{width:120px}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{color:var(--g);text-decoration:none;font-size:15px;font-weight:500}
+.btn{display:inline-block;padding:16px 28px;border-radius:99px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .25s,background .25s,color .25s;border:2px solid var(--g)}
+.btn:hover{transform:translateY(-3px)}
+.b1{background:var(--g);color:var(--a)}.b2{color:var(--g);background:transparent}.b2:hover{background:var(--g);color:var(--a)}
+nav .btn{padding:10px 20px}
+.hero{background:var(--a);padding:70px 0 100px;position:relative;overflow:hidden}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero .logo{width:min(380px,80%);margin-bottom:36px}
+.hero p{font-size:20px;max-width:520px;margin:24px 0 32px;color:var(--c)}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.lines path{stroke-dasharray:6 8;animation:d 2.4s linear infinite}@keyframes d{to{stroke-dashoffset:-56}}
+.fl{animation:f 6s ease-in-out infinite}.fl2{animation-delay:-3s}@keyframes f{50%{transform:translateY(-10px)}}
+.problem{background:var(--g);color:var(--a)}
+.problem h2{color:var(--o);max-width:900px}
+.stm{margin-top:60px;display:grid;gap:0}
+.stm div{font-family:'Instrument Serif',serif;font-size:clamp(28px,4.4vw,52px);line-height:1.15;padding:22px 0;border-top:1px solid rgba(200,244,246,.25);display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.stm span{font:500 14px Inter,sans-serif;color:var(--t);white-space:nowrap}
+.stm p{margin:0}
+.problem .fix{margin-top:44px;font-size:20px;max-width:640px;color:var(--a)}
+.lead{color:var(--m);max-width:560px;margin:18px 0 50px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--o);border:1px solid rgba(0,61,32,.14);border-radius:20px;padding:32px;min-height:260px;cursor:pointer;text-align:left;font:inherit;color:inherit;transition:background .3s,transform .3s,color .3s;display:flex;flex-direction:column;justify-content:space-between}
+.card:hover,.card:focus-visible,.card[aria-expanded=true]{background:var(--g);color:var(--a);transform:translateY(-6px);outline:none}
+.card:hover h3,.card:focus-visible h3,.card[aria-expanded=true] h3{color:var(--o)}
+.card small{font:700 12px Inter;letter-spacing:.12em;color:var(--t)}
+.card p{margin:12px 0 0;font-size:15px;line-height:1.5;max-height:0;overflow:hidden;opacity:0;transition:max-height .4s,opacity .4s}
+.card:hover p,.card:focus-visible p,.card[aria-expanded=true] p{max-height:160px;opacity:1}
+@media(hover:none){.card p{max-height:160px;opacity:1}}
+.how{background:var(--a)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;position:relative}
+.step{padding:0 28px 0 0}
+.step b{font:italic 400 90px/1 'Instrument Serif',serif;color:var(--t);display:block}
+.step h3{margin:6px 0 10px}
+.bar{height:3px;background:rgba(0,61,32,.15);margin:18px 0 22px;position:relative}
+.bar:after{content:"";position:absolute;inset:0;background:var(--g);transform:scaleX(0);transform-origin:left;transition:transform 1.2s .3s}
+.in .bar:after{transform:scaleX(1)}
+.note{margin-top:56px;background:var(--g);color:var(--a);border-radius:24px;padding:34px 38px;font-size:19px}
+.note strong{color:var(--o)}
+.fnd{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:50px}
+.pt{aspect-ratio:4/5;border
