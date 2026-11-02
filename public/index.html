@@ -58,8 +58,8 @@ nav .btn{padding:10px 20px}
 .note{margin-top:56px;background:var(--g);color:var(--a);border-radius:24px;padding:34px 38px;font-size:19px}
 .note strong{color:var(--o)}
 .fnd{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:50px}
-.pt{aspect-ratio:4/5;border-radius:24px;background:linear-gradient(160deg,var(--a),#9fe3e4);display:grid;place-items:center;color:var(--g);font:italic 28px 'Instrument Serif',serif;position:relative;overflow:hidden}
-.pt:after{content:"Portrait to come";position:absolute;bottom:18px;left:20px;font:500 12px Inter;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+.pt{aspect-ratio:4/5;border-radius:24px;background:var(--a);display:grid;place-items:center;color:var(--g);font:italic 28px 'Instrument Serif',serif;position:relative;overflow:hidden}
+.pt img{width:100%;height:100%;object-fit:cover;display:block}
 .fnd h3{font-size:40px;margin:20px 0 4px}.fnd .r{color:var(--m);font-weight:500;margin:0 0 10px}
 .vals{display:flex;gap:10px;flex-wrap:wrap;margin-top:60px}
 .vals span{border:1px solid var(--g);color:var(--g);padding:9px 18px;border-radius:99px;font-weight:500;font-size:14px}
@@ -126,7 +126,7 @@ footer p a{color:inherit}
 <p class="fix">Desk Two takes the weight off, so you can get back to strategy, growth and the work only you can do.</p></div></section>
 
 <section id="services"><div class="w"><h2 class="rv">Support that fits <em>how you work.</em></h2>
-<p class="lead rv">Tailored, high-value support that slots into your existing tools and rhythms — no new systems to learn.</p>
+<p class="lead rv">Tailored, high-value support that slots into your existing tools and rhythms, with no new systems to learn.</p>
 <div class="grid" id="cards"></div></div></section>
 
 <section class="how" id="how"><div class="w"><h2 class="rv">Simple by design. <em>Personal by nature.</em></h2>
@@ -134,12 +134,12 @@ footer p a{color:inherit}
 <div class="step"><b>1</b><div class="bar"></div><h3>Understanding you</h3><p>We learn your goals, people, tools and preferences, so we work the way you would.</p></div>
 <div class="step"><b>2</b><div class="bar"></div><h3>Take ownership of the details</h3><p>We handle the day-to-day behind the scenes, proactively, and keep you in the loop.</p></div>
 <div class="step"><b>3</b><div class="bar"></div><h3>Give you back valuable time</h3><p>Fewer distractions, clearer priorities and the headspace to focus on growth.</p></div></div>
-<div class="note rv"><strong>Millie and Jack work with every client, together.</strong> Reliable support, clear communication and a real working relationship — not a faceless ticket queue.</div></div></section>
+<div class="note rv"><strong>Millie and Jack work with every client, together.</strong> Reliable support, clear communication and a real working relationship, not a faceless ticket queue.</div></div></section>
 
 <section id="founders"><div class="w"><h2 class="rv">Meet <em>Millie & Jack.</em></h2>
 <div class="fnd">
-<div class="rv"><div class="pt">Millie</div><h3>Millie</h3><p class="r">Co-founder</p><p>Millie brings calm, initiative and an eye for detail to every client relationship. She’s the person who notices what’s about to slip — and has already dealt with it.</p></div>
-<div class="rv"><div class="pt">Jack</div><h3>Jack</h3><p class="r">Co-founder</p><p>Jack combines sharp organisation with a practical, commercial mindset. He builds the structure that keeps your business moving and your week under control.</p></div></div>
+<div class="rv"><div class="pt"><img src="/img/millie.jpg" alt="Millie, co-founder of Desk Two" width="800" height="1000" loading="lazy"></div><h3>Millie</h3><p class="r">Co-founder</p><p>Millie brings calm, initiative and an eye for detail to every client relationship. She’s the person who notices what’s about to slip, and has already dealt with it.</p></div>
+<div class="rv"><div class="pt"><img src="/img/jack.jpg" alt="Jack, co-founder of Desk Two" width="800" height="1000" loading="lazy"></div><h3>Jack</h3><p class="r">Co-founder</p><p>Jack combines sharp organisation with a practical, commercial mindset. He builds the structure that keeps your business moving and your week under control.</p></div></div>
 <div class="vals rv"><span>Trust</span><span>Initiative</span><span>Attention to detail</span><span>Genuine commitment</span></div></div></section>
 
 <section class="out" id="book"><div class="w rv"><h2>Less time managing the details. <em>More time building what matters.</em></h2>
@@ -148,7 +148,7 @@ footer p a{color:inherit}
 
 <footer><div class="w"><a class="logo" href="#top" aria-label="Desk Two"><img src="/.netlify/images?url=/img/desk-two-logo.png&w=1200&fm=webp" alt="Desk Two"></a><p>Remote executive support · United Kingdom · team@desktwo.co.uk · <a href="/privacy.html">Privacy</a></p></div></footer>
 <script>
-const S=[["Executive & administrative support","Your day-to-day, handled: documents, travel, bookings and everything in between."],["Inbox & calendar management","Triage, drafting and scheduling so your time goes to what’s important."],["Research & information gathering","Clear, concise briefs on markets, people and opportunities."],["Project & task coordination","Deadlines tracked, owners chased and loose ends tied up."],["Client communications & follow-ups","Professional, timely messages in your voice, never missed."],["Ad hoc business & personal admin","The one-offs that don’t fit anywhere else — covered."]];
+const S=[["Executive & administrative support","Your day-to-day, handled: documents, travel, bookings and everything in between."],["Inbox & calendar management","Triage, drafting and scheduling so your time goes to what’s important."],["Research & information gathering","Clear, concise briefs on markets, people and opportunities."],["Project & task coordination","Deadlines tracked, owners chased and loose ends tied up."],["Client communications & follow-ups","Professional, timely messages in your voice, never missed."],["Ad hoc business & personal admin","The one-offs that don’t fit anywhere else, covered."]];
 const g=document.getElementById('cards');
 S.forEach((s,i)=>{const b=document.createElement('button');b.className='card rv';b.setAttribute('aria-expanded','false');b.style.transitionDelay=(i%3)*80+'ms';b.innerHTML='<small>0'+(i+1)+'</small><div><h3>'+s[0]+'</h3><p>'+s[1]+'</p></div>';b.onclick=()=>b.setAttribute('aria-expanded',b.getAttribute('aria-expanded')=='true'?'false':'true');g.appendChild(b)});
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
